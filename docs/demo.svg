@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="650" viewBox="0 0 1040 650" font-family="Menlo, SFMono-Regular, Consolas, 'Liberation Mono', monospace" font-size="17">
+<rect width="1040" height="650" fill="#0D1117"/>
+<rect width="1040" height="38" fill="#161B22"/>
+<circle cx="24" cy="19" r="6.5" fill="#FF5F56"/>
+<circle cx="48" cy="19" r="6.5" fill="#FFBD2E"/>
+<circle cx="72" cy="19" r="6.5" fill="#27C942"/>
+<text x="100" y="25" fill="#7D8A97" font-size="15">gatecheck — demo</text>
+<text x="24" y="77" fill="#E6EDF3" xml:space="preserve">$ gatecheck lint drafts/ --platform toutiao</text>
+<text x="24" y="133" fill="#D29922" xml:space="preserve">⚠ G001 drafts/demo.md [toutiao] — 没有旁挂 meta，正文也找不到可点/可跑的锚点</text>
+<text x="24" y="161" fill="#7D8A97" xml:space="preserve">   fix: 补 &lt;name&gt;.meta.json 的 sources[]，或正文加入官方链接/可复现命令</text>
+<text x="24" y="217" fill="#F85149" xml:space="preserve">✗ G002 drafts/demo.md:5 [toutiao] — 对外数量未核实：'合集共九篇'</text>
+<text x="24" y="245" fill="#7D8A97" xml:space="preserve">   fix: 改成「本系列第 N 篇」这类不承诺总量的说法</text>
+<text x="24" y="273" fill="#7D8A97" xml:space="preserve">   或在 meta.verified_numbers 写前台实测数</text>
+<text x="24" y="329" fill="#58A6FF" xml:space="preserve">ℹ G007 drafts/demo.md [toutiao] — 未记录 AI 声明状态</text>
+<text x="24" y="357" fill="#E6EDF3" xml:space="preserve">结论：FAIL（1 fail / 1 warn / 1 info）</text>
+<text x="24" y="413" fill="#E6EDF3" xml:space="preserve">$ gatecheck claim --platform toutiao --title "八月电费复盘"</text>
+<text x="24" y="441" fill="#3FB950" xml:space="preserve">✓ 已占锁：toutiao / 八月电费复盘</text>
+<text x="24" y="497" fill="#E6EDF3" xml:space="preserve">$ gatecheck verify --platform toutiao --title "八月电费复盘" \</text>
+<text x="24" y="525" fill="#E6EDF3" xml:space="preserve">    --evidence "列表里没有同标题行"</text>
+<text x="24" y="553" fill="#3FB950" xml:space="preserve">✓ 发前复查已记录（2026-10-31T08:04:06+08:00）</text>
+<text x="24" y="581" fill="#7D8A97" xml:space="preserve">  现在 60 秒内点发布；超时重跑 verify</text>
+<text x="24" y="637" fill="#E6EDF3" xml:space="preserve">$ gatecheck publish --platform toutiao --title "八月电费复盘"</text>
+<text x="24" y="665" fill="#F85149" xml:space="preserve">✗ 发前复查已过期 5 秒（窗口 60 秒），重新 verify 再点发布</text>
+</svg>

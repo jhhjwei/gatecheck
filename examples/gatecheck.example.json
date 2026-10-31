@@ -1,0 +1,45 @@
+{
+  "state_dir": ".gatecheck",
+  "ledger_dir": "ledger",
+  "published_dir": "published",
+  "corpus": {
+    "roots": ["drafts", "published"],
+    "window_days": 14,
+    "max_docs": 200,
+    "exclude": ["*-cta.*"]
+  },
+  "duplicate": {
+    "warn_ratio": 0.86
+  },
+  "publish_lock": {
+    "claim_ttl": 7200,
+    "verify_to_publish": 60,
+    "publish_to_confirm": 900,
+    "dedupe_hours": 24
+  },
+  "platforms": {
+    "toutiao": {
+      "title_max": 22,
+      "ai_declaration": ["作品声明-引用AI 勾选", "头条首发 不勾"]
+    },
+    "xhs": {
+      "title_max": 20,
+      "ai_declaration": ["AI 生成图需在发布页勾选声明"]
+    },
+    "csdn": { "title_max": 80 },
+    "xianyu": { "title_max": 30, "extra_banned": [] },
+    "kuaishou": { "title_max": 60 }
+  },
+  "milestones": [
+    {
+      "id": "D45",
+      "metric": "net_revenue",
+      "target": 500,
+      "baseline": "2026-10-24",
+      "window_hours": 72,
+      "source_field": "pnl.csv:net",
+      "income_stream": "service",
+      "check_after": "2026-10-28T12:00:00+08:00"
+    }
+  ]
+}

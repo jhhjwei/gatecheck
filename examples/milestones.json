@@ -1,0 +1,23 @@
+[
+  {
+    "id": "D45",
+    "metric": "net_revenue",
+    "target": 500,
+    "baseline": "2026-10-24",
+    "window_hours": 72,
+    "source_field": "pnl.csv:net",
+    "income_stream": "service",
+    "check_after": "2026-10-28T12:00:00+08:00",
+    "notes": "切换后新增的服务收入，不含平台激励"
+  },
+  {
+    "id": "D46",
+    "metric": "platform_income",
+    "target": "累计 ≥ 100 元",
+    "baseline": "累计",
+    "window_hours": 72,
+    "source_field": "收益明细:total",
+    "income_stream": "platform",
+    "notes": "错误示范：切换瞬间就已满足，且把激励任务奖励算进了分成"
+  }
+]
